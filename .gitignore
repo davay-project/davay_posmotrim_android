@@ -33,4 +33,3 @@ google-services.json
 # Android Profiling
 *.hprof
 
-/app/src/test/java/com.davayposmotrim.android/*
