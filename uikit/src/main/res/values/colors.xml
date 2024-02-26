@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_base">#F1F3F8</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="text_base">#2E2D2D</color>
+    <color name="text_headings">#1C1C1C</color>
+    <color name="text_caption_dark">#6D6C6C</color>
+    <color name="text_caption_light">#C0C0C0</color>
+    <color name="text_light">#FFFFFF</color>
+    <color name="accent_primary_base">#8B55FF</color>
+    <color name="accent_primary_hover">#9666FF</color>
+    <color name="accent_primary_focused">#AE88FF</color>
+    <color name="accent_primary_light">#C5AAFF</color>
+    <color name="accent_secondary_base">#30F5A2</color>
+    <color name="accent_secondary_hover">#45F6BE</color>
+    <color name="accent_secondary_focused">#6EF8BE</color>
+    <color name="accent_secondary_light">#97FAD0</color>
+    <color name="accent_tertiary_base">#2E2D2D</color>
+    <color name="accent_tertiary_hover">#434242</color>
+    <color name="accent_tertiary_focused">#585757</color>
+    <color name="accent_tertiary_light">#979696</color>
+    <color name="icon_primary">3A3A3A</color>
+    <color name="icon_secondary">#727272</color>
+    <color name="icon_tertiary">#868686</color>
+    <color name="icon_light">#F1F3F8</color>
+    <color name="additional_done">#009A51</color>
+    <color name="additional_attention">#FBC136</color>
+    <color name="additional_error">#DE1135</color>
+    <color name="additional_info">#2E2D2D</color>
+</resources>
