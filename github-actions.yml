@@ -1,0 +1,27 @@
+name: Android Build and Test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Gradle
+        uses: actions/setup-gradle@v2
+        with:
+          gradle-version: '7.0.2'
+
+      - name: Build and Test
+        run: ./gradlew build
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v2
+        with:
+          name: android-app.apk
+          path: ./app/build/outputs/apk/release/app-release.apk
