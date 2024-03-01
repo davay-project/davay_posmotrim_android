@@ -33,7 +33,7 @@ class MainFragment:Fragment(R.layout.fragment_main) {
         }
 
         binding.buttonToConnectingToSession.setOnClickListener{
-            findNavController().navigate(R.id.action_createSessionFragment_to_invitingUsersFragment)
+            findNavController().navigate(R.id.action_mainFragment_to_connectingSessionFragment)
         }
 
 
