@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_application"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.davayposmotrim.android.screens.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splashFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:popUpTo="@+id/nav_graph_application"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/introductoryFragment"
+        android:name="com.davayposmotrim.android.screens.IntroductoryFragment"
+        android:label="IntroductoryFragment">
+        <action
+            android:id="@+id/action_introductoryFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@+id/nav_graph_application"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.davayposmotrim.android.screens.RegistrationFragment"
+        android:label="RegistrationFragment">
+        <action
+            android:id="@+id/action_registrationFragment_to_introductoryFragment"
+            app:destination="@id/introductoryFragment"
+            app:popUpTo="@+id/nav_graph_application"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.davayposmotrim.android.screens.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_editNameFragment"
+            app:destination="@id/editNameFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_createSessionFragment"
+            app:destination="@id/createSessionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_favoriteMoviesFragment"
+            app:destination="@id/favoriteMoviesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_connectingSessionFragment2"
+            app:destination="@id/connectingSessionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNameFragment"
+        android:name="com.davayposmotrim.android.screens.EditNameFragment"
+        android:label="EditNameFragment" />
+    <fragment
+        android:id="@+id/createSessionFragment"
+        android:name="com.davayposmotrim.android.screens.CreateSessionFragment"
+        android:label="CreateSessionFragment">
+        <action
+            android:id="@+id/action_createSessionFragment_to_invitingUsersFragment"
+            app:destination="@id/invitingUsersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteMoviesFragment"
+        android:name="com.davayposmotrim.android.screens.FavoriteMoviesFragment"
+        android:label="FavoriteMoviesFragment" />
+    <fragment
+        android:id="@+id/connectingSessionFragment"
+        android:name="com.davayposmotrim.android.screens.ConnectingSessionFragment"
+        android:label="ConnectingSessionFragment" />
+    <fragment
+        android:id="@+id/invitingUsersFragment"
+        android:name="com.davayposmotrim.android.screens.InvitingUsersFragment"
+        android:label="InvitingUsersFragment">
+        <action
+            android:id="@+id/action_invitingUsersFragment_to_alertDialogCancelSessionFragment"
+            app:destination="@id/alertDialogCancelSessionFragment" />
+        <action
+            android:id="@+id/action_invitingUsersFragment_to_movieSelectionFragment"
+            app:destination="@id/movieSelectionFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/alertDialogCancelSessionFragment"
+        android:name="com.davayposmotrim.android.screens.AlertDialogCancelSessionFragment"
+        android:label="AlertDialogCancelSessionFragment">
+        <action
+            android:id="@+id/action_alertDialogCancelSessionFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
+    </dialog>
+    <fragment
+        android:id="@+id/movieSelectionFragment"
+        android:name="com.davayposmotrim.android.screens.MovieSelectionFragment"
+        android:label="MovieSelectionFragment" />
+
+</navigation>
