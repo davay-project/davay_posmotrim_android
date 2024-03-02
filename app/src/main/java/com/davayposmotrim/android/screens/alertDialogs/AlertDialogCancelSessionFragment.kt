@@ -1,4 +1,4 @@
-package com.davayposmotrim.android.screens
+package com.davayposmotrim.android.screens.alertDialogs
 
 import android.app.AlertDialog
 import android.app.Dialog

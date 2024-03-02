@@ -7,23 +7,24 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.davayposmotrim.android.R
-import com.davayposmotrim.android.databinding.FragmentCreateSessionBinding
-import com.davayposmotrim.android.databinding.FragmentFavoriteMoviesBinding
+import com.davayposmotrim.android.databinding.FragmentCoincidencesBinding
+import com.davayposmotrim.android.databinding.FragmentMovieSelectionBinding
 
-class FavoriteMoviesFragment:Fragment(R.layout.fragment_favorite_movies) {
-    private var _binding: FragmentFavoriteMoviesBinding? = null
+class CoincidencesFragment:Fragment(R.layout.fragment_coincidences) {
+
+    private var _binding: FragmentCoincidencesBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentFavoriteMoviesBinding.inflate(inflater, container, false)
+        _binding = FragmentCoincidencesBinding.inflate(inflater, container, false)
 
-
-        binding.buttonToSessions.setOnClickListener {
-            findNavController().navigate(R.id.action_favoriteMoviesFragment_to_sessionsFragment)
+        binding.buttonToMovie.setOnClickListener {
+            findNavController().navigate(R.id.action_coincidencesFragment_to_movieFragment)
         }
+
         return binding.root
     }
 
@@ -31,5 +32,4 @@ class FavoriteMoviesFragment:Fragment(R.layout.fragment_favorite_movies) {
         super.onDestroyView()
         _binding = null
     }
-
 }

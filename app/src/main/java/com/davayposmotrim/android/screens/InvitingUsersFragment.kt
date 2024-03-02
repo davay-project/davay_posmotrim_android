@@ -1,17 +1,14 @@
 package com.davayposmotrim.android.screens
 
-import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContentProviderCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.davayposmotrim.android.MainActivity
 import com.davayposmotrim.android.R
 import com.davayposmotrim.android.databinding.FragmentInvitingUsersBinding
-import com.davayposmotrim.android.databinding.FragmentRegistrationBinding
+import com.davayposmotrim.android.screens.alertDialogs.AlertDialogCancelSessionFragment
 
 class InvitingUsersFragment : Fragment(R.layout.fragment_inviting_users) {
 
@@ -26,8 +23,7 @@ class InvitingUsersFragment : Fragment(R.layout.fragment_inviting_users) {
 
 
         binding.buttonCancelSession.setOnClickListener {
-            val dialogFragment = AlertDialogCancelSessionFragment()
-            dialogFragment.show(requireFragmentManager(), "dialog")
+         findNavController().navigate(R.id.action_invitingUsersFragment_to_alertDialogCancelSessionFragment)
         }
         binding.buttonStart.setOnClickListener {
             findNavController().navigate(R.id.action_invitingUsersFragment_to_movieSelectionFragment)

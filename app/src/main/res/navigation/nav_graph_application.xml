@@ -66,7 +66,11 @@
     <fragment
         android:id="@+id/favoriteMoviesFragment"
         android:name="com.davayposmotrim.android.screens.FavoriteMoviesFragment"
-        android:label="FavoriteMoviesFragment" />
+        android:label="FavoriteMoviesFragment" >
+        <action
+            android:id="@+id/action_favoriteMoviesFragment_to_sessionsFragment"
+            app:destination="@id/sessionsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/connectingSessionFragment"
         android:name="com.davayposmotrim.android.screens.ConnectingSessionFragment"
@@ -80,11 +84,13 @@
             app:destination="@id/alertDialogCancelSessionFragment" />
         <action
             android:id="@+id/action_invitingUsersFragment_to_movieSelectionFragment"
-            app:destination="@id/movieSelectionFragment" />
+            app:destination="@id/movieSelectionFragment"
+            app:popUpToInclusive="false"
+            app:popUpTo="@id/mainFragment"/>
     </fragment>
     <dialog
         android:id="@+id/alertDialogCancelSessionFragment"
-        android:name="com.davayposmotrim.android.screens.AlertDialogCancelSessionFragment"
+        android:name="com.davayposmotrim.android.screens.alertDialogs.AlertDialogCancelSessionFragment"
         android:label="AlertDialogCancelSessionFragment">
         <action
             android:id="@+id/action_alertDialogCancelSessionFragment_to_mainFragment"
@@ -95,6 +101,48 @@
     <fragment
         android:id="@+id/movieSelectionFragment"
         android:name="com.davayposmotrim.android.screens.MovieSelectionFragment"
-        android:label="MovieSelectionFragment" />
+        android:label="MovieSelectionFragment">
+        <action
+            android:id="@+id/action_movieSelectionFragment_to_matchesFragment"
+            app:destination="@id/matchesFragment2" />
+        <action
+            android:id="@+id/action_movieSelectionFragment_to_coincidencesFragment"
+            app:destination="@id/coincidencesFragment" />
+        <action
+            android:id="@+id/action_movieSelectionFragment_to_alertDialogLeaveSession"
+            app:destination="@id/alertDialogLeaveSession" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchesFragment2"
+        android:name="com.davayposmotrim.android.screens.MatchesFragment"
+        android:label="MatchesFragment" />
+    <fragment
+        android:id="@+id/coincidencesFragment"
+        android:name="com.davayposmotrim.android.screens.CoincidencesFragment"
+        android:label="CoincidencesFragment" >
+        <action
+            android:id="@+id/action_coincidencesFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.davayposmotrim.android.screens.MovieFragment"
+        android:label="MovieFragment" />
+    <fragment
+        android:id="@+id/sessionsFragment"
+        android:name="com.davayposmotrim.android.screens.SessionsFragment"
+        android:label="SessionsFragment" >
+        <action
+            android:id="@+id/action_sessionsFragment_to_movieFragment"
+            app:destination="@id/movieFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/alertDialogLeaveSession"
+        android:name="com.davayposmotrim.android.screens.alertDialogs.AlertDialogLeaveSession"
+        android:label="AlertDialogLeaveSession" >
+        <action
+            android:id="@+id/action_alertDialogLeaveSession_to_favoriteMoviesFragment"
+            app:destination="@id/favoriteMoviesFragment" />
+    </dialog>
 
 </navigation>
