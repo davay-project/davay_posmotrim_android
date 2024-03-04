@@ -9,20 +9,20 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import com.davayposmotrim.android.R
-import com.davayposmotrim.android.databinding.FragmentAlertDialogBinding
+import com.davayposmotrim.android.databinding.FragmentAlertDialogCancelSessionBinding
 import com.davayposmotrim.android.databinding.FragmentRegistrationBinding
 
 
 class AlertDialogCancelSessionFragment : DialogFragment() {
 
-    private var _binding: FragmentAlertDialogBinding? = null
+    private var _binding: FragmentAlertDialogCancelSessionBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAlertDialogBinding.inflate(inflater, container, false)
+        _binding = FragmentAlertDialogCancelSessionBinding.inflate(inflater, container, false)
         return binding.root
     }
 

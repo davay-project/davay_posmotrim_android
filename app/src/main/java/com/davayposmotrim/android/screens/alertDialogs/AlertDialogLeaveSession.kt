@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.findNavController
 import com.davayposmotrim.android.R
-import com.davayposmotrim.android.databinding.FragmentAlertDialogBinding
 import com.davayposmotrim.android.databinding.FragmentAlertDialogLeaveSessionBinding
 
 class AlertDialogLeaveSession: DialogFragment() {
