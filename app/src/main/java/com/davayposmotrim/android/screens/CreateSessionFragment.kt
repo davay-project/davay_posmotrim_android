@@ -11,17 +11,14 @@ import com.davayposmotrim.android.databinding.FragmentConnectingSessionBinding
 import com.davayposmotrim.android.databinding.FragmentCreateSessionBinding
 import com.davayposmotrim.android.databinding.FragmentRegistrationBinding
 
-class CreateSessionFragment:Fragment(R.layout.fragment_create_session) {
+class CreateSessionFragment : Fragment(R.layout.fragment_create_session) {
     private var _binding: FragmentCreateSessionBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentCreateSessionBinding.inflate(inflater, container, false)
-
-
         binding.buttonToInvitingUsers.setOnClickListener {
             findNavController().navigate(R.id.action_createSessionFragment_to_invitingUsersFragment)
         }

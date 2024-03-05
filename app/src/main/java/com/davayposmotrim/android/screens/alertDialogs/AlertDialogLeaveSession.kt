@@ -9,11 +9,9 @@ import androidx.navigation.fragment.findNavController
 import com.davayposmotrim.android.R
 import com.davayposmotrim.android.databinding.FragmentAlertDialogLeaveSessionBinding
 
-class AlertDialogLeaveSession: DialogFragment() {
-
+class AlertDialogLeaveSession : DialogFragment() {
     private var _binding: FragmentAlertDialogLeaveSessionBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

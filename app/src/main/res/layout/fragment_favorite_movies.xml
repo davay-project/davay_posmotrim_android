@@ -9,7 +9,6 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
-
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
@@ -21,6 +20,5 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sessions" />
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

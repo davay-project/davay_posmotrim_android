@@ -9,9 +9,9 @@
         android:name="com.davayposmotrim.android.screens.SplashFragment"
         android:label="SplashFragment">
         <action
-            android:id="@+id/action_splashFragment_to_registrationFragment"
-            app:destination="@id/registrationFragment"
-            app:popUpTo="@+id/nav_graph_application"
+            android:id="@+id/action_splashFragment_to_introductoryFragment"
+            app:destination="@id/introductoryFragment"
+            app:popUpTo="@id/nav_graph_application"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -19,9 +19,9 @@
         android:name="com.davayposmotrim.android.screens.IntroductoryFragment"
         android:label="IntroductoryFragment">
         <action
-            android:id="@+id/action_introductoryFragment_to_mainFragment"
-            app:destination="@id/mainFragment"
-            app:popUpTo="@+id/nav_graph_application"
+            android:id="@+id/action_introductoryFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:popUpTo="@id/nav_graph_application"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -29,9 +29,9 @@
         android:name="com.davayposmotrim.android.screens.RegistrationFragment"
         android:label="RegistrationFragment">
         <action
-            android:id="@+id/action_registrationFragment_to_introductoryFragment"
-            app:destination="@id/introductoryFragment"
-            app:popUpTo="@+id/nav_graph_application"
+            android:id="@+id/action_registrationFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/nav_graph_application"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -66,7 +66,7 @@
     <fragment
         android:id="@+id/favoriteMoviesFragment"
         android:name="com.davayposmotrim.android.screens.FavoriteMoviesFragment"
-        android:label="FavoriteMoviesFragment" >
+        android:label="FavoriteMoviesFragment">
         <action
             android:id="@+id/action_favoriteMoviesFragment_to_sessionsFragment"
             app:destination="@id/sessionsFragment" />
@@ -85,8 +85,8 @@
         <action
             android:id="@+id/action_invitingUsersFragment_to_movieSelectionFragment"
             app:destination="@id/movieSelectionFragment"
-            app:popUpToInclusive="false"
-            app:popUpTo="@id/mainFragment"/>
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="false" />
     </fragment>
     <dialog
         android:id="@+id/alertDialogCancelSessionFragment"
@@ -119,7 +119,7 @@
     <fragment
         android:id="@+id/coincidencesFragment"
         android:name="com.davayposmotrim.android.screens.CoincidencesFragment"
-        android:label="CoincidencesFragment" >
+        android:label="CoincidencesFragment">
         <action
             android:id="@+id/action_coincidencesFragment_to_movieFragment"
             app:destination="@id/movieFragment" />
@@ -131,7 +131,7 @@
     <fragment
         android:id="@+id/sessionsFragment"
         android:name="com.davayposmotrim.android.screens.SessionsFragment"
-        android:label="SessionsFragment" >
+        android:label="SessionsFragment">
         <action
             android:id="@+id/action_sessionsFragment_to_movieFragment"
             app:destination="@id/movieFragment" />
@@ -139,7 +139,7 @@
     <dialog
         android:id="@+id/alertDialogLeaveSession"
         android:name="com.davayposmotrim.android.screens.alertDialogs.AlertDialogLeaveSession"
-        android:label="AlertDialogLeaveSession" >
+        android:label="AlertDialogLeaveSession">
         <action
             android:id="@+id/action_alertDialogLeaveSession_to_favoriteMoviesFragment"
             app:destination="@id/favoriteMoviesFragment" />

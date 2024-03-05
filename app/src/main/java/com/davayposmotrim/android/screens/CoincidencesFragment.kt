@@ -10,21 +10,17 @@ import com.davayposmotrim.android.R
 import com.davayposmotrim.android.databinding.FragmentCoincidencesBinding
 import com.davayposmotrim.android.databinding.FragmentMovieSelectionBinding
 
-class CoincidencesFragment:Fragment(R.layout.fragment_coincidences) {
-
+class CoincidencesFragment : Fragment(R.layout.fragment_coincidences) {
     private var _binding: FragmentCoincidencesBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentCoincidencesBinding.inflate(inflater, container, false)
-
         binding.buttonToMovie.setOnClickListener {
             findNavController().navigate(R.id.action_coincidencesFragment_to_movieFragment)
         }
-
         return binding.root
     }
 

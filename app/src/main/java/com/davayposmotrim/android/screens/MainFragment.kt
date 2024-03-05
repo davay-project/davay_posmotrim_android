@@ -10,33 +10,26 @@ import com.davayposmotrim.android.R
 import com.davayposmotrim.android.databinding.FragmentMainBinding
 import com.davayposmotrim.android.databinding.FragmentRegistrationBinding
 
-class MainFragment:Fragment(R.layout.fragment_main) {
+class MainFragment : Fragment(R.layout.fragment_main) {
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
-
         binding.buttonToEditName.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_editNameFragment)
         }
-
-        binding.buttonToCreateSession.setOnClickListener{
+        binding.buttonToCreateSession.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_createSessionFragment)
         }
-
-        binding.buttonToFavoriteMovies.setOnClickListener{
+        binding.buttonToFavoriteMovies.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_favoriteMoviesFragment)
         }
-
-        binding.buttonToConnectingToSession.setOnClickListener{
+        binding.buttonToConnectingToSession.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_connectingSessionFragment)
         }
-
-
         return binding.root
     }
 

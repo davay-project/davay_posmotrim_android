@@ -9,9 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.davayposmotrim.android.R
 import com.davayposmotrim.android.databinding.FragmentMatchesBinding
 
-
-class MatchesFragment:Fragment(R.layout.fragment_matches) {
-
+class MatchesFragment : Fragment(R.layout.fragment_matches) {
     private var _binding: FragmentMatchesBinding? = null
     private val binding get() = _binding!!
 
@@ -20,12 +18,9 @@ class MatchesFragment:Fragment(R.layout.fragment_matches) {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMatchesBinding.inflate(inflater, container, false)
-
-
         binding.buttonContinueSession.setOnClickListener {
             findNavController().popBackStack(R.id.movieSelectionFragment, false)
         }
-
         return binding.root
     }
 
@@ -33,5 +28,4 @@ class MatchesFragment:Fragment(R.layout.fragment_matches) {
         super.onDestroyView()
         _binding = null
     }
-
 }

@@ -18,10 +18,8 @@ class IntroductoryFragment : Fragment(R.layout.fragment_introductory) {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentIntroductoryBinding.inflate(inflater, container, false)
-
-
-        binding.buttonToMain.setOnClickListener {
-           findNavController().navigate(R.id.action_introductoryFragment_to_mainFragment)
+        binding.buttonToRegistration.setOnClickListener {
+            findNavController().navigate(R.id.action_introductoryFragment_to_registrationFragment)
         }
         return binding.root
     }

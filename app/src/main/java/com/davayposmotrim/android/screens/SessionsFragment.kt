@@ -10,17 +10,14 @@ import com.davayposmotrim.android.R
 import com.davayposmotrim.android.databinding.FragmentCreateSessionBinding
 import com.davayposmotrim.android.databinding.FragmentSessionsBinding
 
-class SessionsFragment:Fragment(R.layout.fragment_sessions) {
+class SessionsFragment : Fragment(R.layout.fragment_sessions) {
     private var _binding: FragmentSessionsBinding? = null
     private val binding get() = _binding!!
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSessionsBinding.inflate(inflater, container, false)
-
-
         binding.buttonToMovieFromSessions.setOnClickListener {
             findNavController().navigate(R.id.action_sessionsFragment_to_movieFragment)
         }
