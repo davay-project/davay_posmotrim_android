@@ -1,24 +1,15 @@
 package com.example.uikit_sample.ui.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.uikit_sample.databinding.ListItemCustomViewBinding
-import com.example.uikit_sample.model.CustomElement
+import com.example.uikit_sample.model.Elements
 
-class CustomElementListAdapter : RecyclerView.Adapter<CustomElementListAdapter.CustomElementViewHolder>() {
+class CustomElementListAdapter(context: Context) : RecyclerView.Adapter<CustomElementListAdapter.CustomElementViewHolder>() {
 
-    val customElements = listOf(
-        CustomElement("DavayBannerView"),
-        CustomElement("DavayButtonView"),
-        CustomElement("DavayFilmView"),
-        CustomElement("DavayMovieEvaluationView"),
-        CustomElement("DavayMovieSelectionView"),
-        CustomElement("DavaySessionView"),
-        CustomElement("DavayTabView"),
-        CustomElement("DavayTagView")
-    )
+    private val clickHandler: ClickEventHandler = context as ClickEventHandler
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomElementViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -26,16 +17,17 @@ class CustomElementListAdapter : RecyclerView.Adapter<CustomElementListAdapter.C
         return CustomElementViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = customElements.size
+    override fun getItemCount(): Int = Elements.entries.size
 
     override fun onBindViewHolder(holder: CustomElementViewHolder, position: Int) {
-        val element = customElements[position]
+        val element = Elements.entries[position]
         with(holder.binding) {
-            customElementName.text = element.name
+            customElementType.id = Elements.valueOf(element.name).ordinal
+            customElementType.text = element.name
+            holder.itemView.setOnClickListener {
+                clickHandler.navigateToFragment(holder)
+            }
         }
     }
-
-    class CustomElementViewHolder(val binding: ListItemCustomViewBinding) : RecyclerView.ViewHolder(binding.root){
-
-    }
+    class CustomElementViewHolder(val binding: ListItemCustomViewBinding) : RecyclerView.ViewHolder(binding.root)
 }

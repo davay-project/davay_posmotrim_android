@@ -1,13 +1,11 @@
 package com.example.uikit_sample.ui.fragments
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.uikit_sample.R
-import com.example.uikit_sample.ui.viewmodels.DavayBannerViewModel
 
 class DavayBannerFragment : Fragment() {
 
@@ -15,7 +13,6 @@ class DavayBannerFragment : Fragment() {
         fun newInstance() = DavayBannerFragment()
     }
 
-    private lateinit var viewModel: DavayBannerViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,11 +20,4 @@ class DavayBannerFragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_davay_banner, container, false)
     }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(DavayBannerViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
-
 }
