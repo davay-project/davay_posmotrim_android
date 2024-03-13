@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.util.AttributeSet
 import android.widget.TextView
 import androidx.annotation.StyleableRes
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.example.uikit.R
@@ -15,7 +16,6 @@ class MovieEvaluationCustomView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
-
     private val ratingIMDbTextView: TextView
     private val stringRatingIMDbTextView: TextView
 
@@ -24,17 +24,16 @@ class MovieEvaluationCustomView @JvmOverloads constructor(
 
         ratingIMDbTextView = findViewById(R.id.ratingIMDbTextView)
         stringRatingIMDbTextView = findViewById(R.id.stringRatingIMDbTextView)
+        val ratingIMDbCard: CardView = findViewById(R.id.ratingIMDbCard)
 
         attrs?.applyStyleable(context, R.styleable.MovieEvaluationCustomView) {
             val rating =
                 getString(R.styleable.MovieEvaluationCustomView_rating)?.toFloatOrNull() ?: 0f
             val color = getRatingColor(rating)
-
-            ratingIMDbTextView.text = R.string.rating_IMDb.toString()
+            stringRatingIMDbTextView.text = context.getString(R.string.rating_IMDb)
             ratingIMDbTextView.text = rating.toString()
-            ratingIMDbTextView.setBackgroundColor(color)
+            ratingIMDbCard.setCardBackgroundColor(color)
         }
-
 
     }
 
@@ -56,7 +55,6 @@ inline fun AttributeSet.applyStyleable(
     @StyleableRes styleableResId: IntArray,
     action: TypedArray.() -> Unit
 ) {
-
     val typedArray = context.obtainStyledAttributes(this, styleableResId)
     typedArray.action()
     typedArray.recycle()

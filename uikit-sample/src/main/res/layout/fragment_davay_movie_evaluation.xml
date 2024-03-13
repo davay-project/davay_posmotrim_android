@@ -15,7 +15,7 @@
         <com.davayposmoritm.uikit.views.MovieEvaluationCustomView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:rating="5.9" />
+            app:rating="6" />
 
     </LinearLayout>
 </FrameLayout>

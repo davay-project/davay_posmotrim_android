@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="rating_IMDb">Рейтинг IMDb</string>
+    <string name="rating_IMDb">Рейтинг IMDb\n111 111 оценок</string>
 </resources>
