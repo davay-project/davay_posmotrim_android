@@ -9,6 +9,8 @@ import androidx.annotation.StyleableRes
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.toColor
+import androidx.core.graphics.toColorInt
 import com.example.uikit.R
 
 class MovieEvaluationCustomView @JvmOverloads constructor(
@@ -18,6 +20,7 @@ class MovieEvaluationCustomView @JvmOverloads constructor(
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
     private val ratingIMDbTextView: TextView
     private val stringRatingIMDbTextView: TextView
+
 
     init {
         inflate(context, R.layout.movie_evaluation_custom_view, this)
@@ -44,7 +47,7 @@ class MovieEvaluationCustomView @JvmOverloads constructor(
             in 0.0f..4.9f -> ContextCompat.getColor(context, R.color.additional_error)
             else -> ContextCompat.getColor(
                 context,
-                androidx.appcompat.R.color.primary_material_light
+                R.color.accent_primary_focused
             )
         }
     }
