@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/ratingIMDbCard"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp">
 
             <TextView
                 android:id="@+id/ratingIMDbTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rating IMDb" />
+                android:padding="15dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/stringRatingIMDbTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:textSize="12sp" />
 
         </androidx.cardview.widget.CardView>
 
