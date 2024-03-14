@@ -8,6 +8,7 @@ import androidx.annotation.StyleableRes
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import com.davayposmoritm.uikit.views.ext.applyStyleable
 import com.example.uikit.R
 
 class MovieEvaluationCustomView @JvmOverloads constructor(
@@ -52,12 +53,3 @@ class MovieEvaluationCustomView @JvmOverloads constructor(
     }
 }
 
-inline fun AttributeSet.applyStyleable(
-    context: Context,
-    @StyleableRes styleableResId: IntArray,
-    action: TypedArray.() -> Unit
-) {
-    val typedArray = context.obtainStyledAttributes(this, styleableResId)
-    typedArray.action()
-    typedArray.recycle()
-}
