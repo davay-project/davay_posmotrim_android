@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="rating_IMDb">Rating IMDb\n111 111 evaluations</string>
+    <string name="titleRating">Title</string>
+    <string name="subtitleRating">Subtitle</string>
 </resources>

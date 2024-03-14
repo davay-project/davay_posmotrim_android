@@ -2,15 +2,12 @@ package com.davayposmoritm.uikit.views
 
 import android.content.Context
 import android.content.res.TypedArray
-import android.graphics.Color
 import android.util.AttributeSet
 import android.widget.TextView
 import androidx.annotation.StyleableRes
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.toColor
-import androidx.core.graphics.toColorInt
 import com.example.uikit.R
 
 class MovieEvaluationCustomView @JvmOverloads constructor(
@@ -18,24 +15,26 @@ class MovieEvaluationCustomView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
-    private val ratingIMDbTextView: TextView
-    private val stringRatingIMDbTextView: TextView
-
+    private val ratingTextView: TextView
+    private val titleTextView: TextView
+    private val subtitleTextView: TextView
 
     init {
         inflate(context, R.layout.movie_evaluation_custom_view, this)
 
-        ratingIMDbTextView = findViewById(R.id.ratingIMDbTextView)
-        stringRatingIMDbTextView = findViewById(R.id.stringRatingIMDbTextView)
-        val ratingIMDbCard: CardView = findViewById(R.id.ratingIMDbCard)
+        ratingTextView = findViewById(R.id.ratingTextView)
+        titleTextView = findViewById(R.id.titleTextView)
+        subtitleTextView = findViewById(R.id.subtitleTextView)
+        val ratingCard: CardView = findViewById(R.id.ratingCard)
 
         attrs?.applyStyleable(context, R.styleable.MovieEvaluationCustomView) {
             val rating =
                 getString(R.styleable.MovieEvaluationCustomView_rating)?.toFloatOrNull() ?: 0f
             val color = getRatingColor(rating)
-            stringRatingIMDbTextView.text = context.getString(R.string.rating_IMDb)
-            ratingIMDbTextView.text = rating.toString()
-            ratingIMDbCard.setCardBackgroundColor(color)
+            titleTextView.text = context.getString(R.string.titleRating)
+            subtitleTextView.text = context.getString(R.string.subtitleRating)
+            ratingTextView.text = rating.toString()
+            ratingCard.setCardBackgroundColor(color)
         }
 
     }
