@@ -7,8 +7,4 @@
         <attr name="subtitleEvaluation" format="string" />
     </declare-styleable>
 
-    <declare-styleable name="SessionCustomView">
-        <attr name="titleSession" format="string" />
-        <attr name="subtitleSession" format="string" />
-    </declare-styleable>
 </resources>
