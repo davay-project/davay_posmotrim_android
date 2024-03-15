@@ -15,16 +15,22 @@
         <com.davayposmoritm.uikit.views.MovieEvaluationCustomView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:titleEvaluation="@string/titleRating"
+            app:subtitleEvaluation="@string/subtitleRating"
             app:rating="9.5" />
 
         <com.davayposmoritm.uikit.views.MovieEvaluationCustomView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:titleEvaluation="@string/titleRating"
+            app:subtitleEvaluation="@string/subtitleRating"
             app:rating="5.7" />
 
         <com.davayposmoritm.uikit.views.MovieEvaluationCustomView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            app:titleEvaluation="@string/titleRating"
+            app:subtitleEvaluation="@string/subtitleRating"
             app:rating="4.1" />
     </LinearLayout>
 </FrameLayout>

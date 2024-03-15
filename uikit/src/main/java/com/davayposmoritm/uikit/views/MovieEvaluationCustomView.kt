@@ -16,28 +16,26 @@ class MovieEvaluationCustomView @JvmOverloads constructor(
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0,
 ) : ConstraintLayout(context, attrs, defStyleAttr) {
-    private val ratingTextView: TextView
-    private val titleTextView: TextView
-    private val subtitleTextView: TextView
 
     init {
         inflate(context, R.layout.movie_evaluation_custom_view, this)
 
-        ratingTextView = findViewById(R.id.ratingTextView)
-        titleTextView = findViewById(R.id.titleTextView)
-        subtitleTextView = findViewById(R.id.subtitleTextView)
-        val ratingCard: CardView = findViewById(R.id.ratingCard)
-
         attrs?.applyStyleable(context, R.styleable.MovieEvaluationCustomView) {
-            val rating =
-                getString(R.styleable.MovieEvaluationCustomView_rating)?.toFloatOrNull() ?: 0f
-            val color = getRatingColor(rating)
-            titleTextView.text = context.getString(R.string.titleRating)
-            subtitleTextView.text = context.getString(R.string.subtitleRating)
-            ratingTextView.text = rating.toString()
-            ratingCard.setCardBackgroundColor(color)
+            findViewById<TextView>(R.id.ratingTextView).text =
+                getString(R.styleable.MovieEvaluationCustomView_rating)?.toFloatOrNull()?.toString()
+                    ?: "0"
+            findViewById<CardView>(R.id.ratingCard).setCardBackgroundColor(
+                getRatingColor(
+                    getString(
+                        R.styleable.MovieEvaluationCustomView_rating
+                    )?.toFloatOrNull() ?: 0f
+                )
+            )
+            findViewById<TextView>(R.id.titleTextView).text =
+                getString(R.styleable.MovieEvaluationCustomView_titleEvaluation)
+            findViewById<TextView>(R.id.subtitleTextView).text =
+                getString(R.styleable.MovieEvaluationCustomView_subtitleEvaluation)
         }
-
     }
 
     private fun getRatingColor(rating: Float): Int {
