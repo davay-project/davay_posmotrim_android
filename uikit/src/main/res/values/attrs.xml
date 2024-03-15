@@ -3,5 +3,8 @@
     <declare-styleable name="MovieEvaluationCustomView">
         <attr name="rating" format="float" />
         <attr name="color" format="color" />
+        <attr name="titleEvaluation" format="string" />
+        <attr name="subtitleEvaluation" format="string" />
     </declare-styleable>
+
 </resources>
