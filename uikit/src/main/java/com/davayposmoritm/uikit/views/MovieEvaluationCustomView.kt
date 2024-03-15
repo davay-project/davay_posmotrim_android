@@ -1,10 +1,8 @@
 package com.davayposmoritm.uikit.views
 
 import android.content.Context
-import android.content.res.TypedArray
 import android.util.AttributeSet
 import android.widget.TextView
-import androidx.annotation.StyleableRes
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
