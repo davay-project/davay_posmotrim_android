@@ -2,7 +2,7 @@ name: Android Build
 
 on:
   pull_request:
-        branches: [develop]
+    branches: [develop]
 
 jobs:
   build:
@@ -17,3 +17,5 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
+      - name: Detekt
+        run: ./gradlew detekt
