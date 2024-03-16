@@ -13,7 +13,8 @@ class AlertDialogCancelSessionFragment : DialogFragment() {
     private var _binding: FragmentAlertDialogCancelSessionBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentAlertDialogCancelSessionBinding.inflate(inflater, container, false)
@@ -36,4 +37,3 @@ class AlertDialogCancelSessionFragment : DialogFragment() {
         _binding = null
     }
 }
-

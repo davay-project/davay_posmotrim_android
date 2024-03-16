@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.uikit_sample.databinding.ListItemCustomViewBinding
 import com.example.uikit_sample.model.Elements
 
-class CustomElementListAdapter(context: Context) : RecyclerView.Adapter<CustomElementListAdapter.CustomElementViewHolder>() {
+class CustomElementListAdapter(context: Context) :
+    RecyclerView.Adapter<CustomElementListAdapter.CustomElementViewHolder>() {
 
     private val clickHandler: ClickEventHandler = context as ClickEventHandler
 
@@ -29,5 +30,7 @@ class CustomElementListAdapter(context: Context) : RecyclerView.Adapter<CustomEl
             }
         }
     }
-    class CustomElementViewHolder(val binding: ListItemCustomViewBinding) : RecyclerView.ViewHolder(binding.root)
+
+    class CustomElementViewHolder(val binding: ListItemCustomViewBinding) :
+        RecyclerView.ViewHolder(binding.root)
 }

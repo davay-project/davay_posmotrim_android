@@ -14,7 +14,8 @@ class MatchesFragment : Fragment(R.layout.fragment_matches) {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentMatchesBinding.inflate(inflater, container, false)

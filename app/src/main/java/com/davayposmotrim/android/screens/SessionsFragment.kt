@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.davayposmotrim.android.R
-import com.davayposmotrim.android.databinding.FragmentCreateSessionBinding
 import com.davayposmotrim.android.databinding.FragmentSessionsBinding
 
 class SessionsFragment : Fragment(R.layout.fragment_sessions) {
     private var _binding: FragmentSessionsBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSessionsBinding.inflate(inflater, container, false)

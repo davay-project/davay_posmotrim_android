@@ -15,7 +15,8 @@ class CustomViewListFragment : Fragment() {
     private lateinit var adapter: CustomElementListAdapter
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCustomViewListBinding.inflate(inflater)
@@ -28,7 +29,6 @@ class CustomViewListFragment : Fragment() {
         val layoutManager = LinearLayoutManager(requireContext())
         binding.customElementList.layoutManager = layoutManager
         binding.customElementList.adapter = adapter
-
     }
 
     companion object {
