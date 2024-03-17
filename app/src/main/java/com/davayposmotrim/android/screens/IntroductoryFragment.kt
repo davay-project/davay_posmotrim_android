@@ -14,7 +14,8 @@ class IntroductoryFragment : Fragment(R.layout.fragment_introductory) {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentIntroductoryBinding.inflate(inflater, container, false)

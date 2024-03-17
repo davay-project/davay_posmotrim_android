@@ -1,19 +1,9 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("io.gitlab.arturbosch.detekt")
 }
-buildscript {
-    repositories {
-        mavenCentral()
-        google()
-    }
-    dependencies {
-        classpath ("com.android.tools.build:gradle:8.2.2")
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
-}
 
 android {
     namespace = "com.davayposmotrim.android"
@@ -48,13 +38,17 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
 }
 
 dependencies {
     val navVersion = "2.7.7"
+
+    //detekt plugins
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.23.3")
+
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
-
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

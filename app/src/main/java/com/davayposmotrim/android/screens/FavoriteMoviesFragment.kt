@@ -13,7 +13,8 @@ class FavoriteMoviesFragment : Fragment(R.layout.fragment_favorite_movies) {
     private var _binding: FragmentFavoriteMoviesBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentFavoriteMoviesBinding.inflate(inflater, container, false)

@@ -8,13 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.davayposmotrim.android.R
 import com.davayposmotrim.android.databinding.FragmentInvitingUsersBinding
-import com.davayposmotrim.android.screens.alertDialogs.AlertDialogCancelSessionFragment
 
 class InvitingUsersFragment : Fragment(R.layout.fragment_inviting_users) {
     private var _binding: FragmentInvitingUsersBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentInvitingUsersBinding.inflate(inflater, container, false)

@@ -35,6 +35,7 @@ class MovieEvaluationCustomView @JvmOverloads constructor(
         }
     }
 
+    @Suppress("MagicNumber")
     private fun getRatingColor(rating: Float): Int {
         return when (rating) {
             in 7.0f..10.0f -> ContextCompat.getColor(context, R.color.accent_secondary_base)
@@ -47,4 +48,3 @@ class MovieEvaluationCustomView @JvmOverloads constructor(
         }
     }
 }
-
