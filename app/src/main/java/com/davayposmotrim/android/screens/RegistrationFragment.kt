@@ -7,24 +7,38 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.davayposmotrim.android.R
+import com.davayposmotrim.android.base.BaseFragment
 import com.davayposmotrim.android.databinding.FragmentRegistrationBinding
 
-class RegistrationFragment : Fragment(R.layout.fragment_registration) {
-    private var _binding: FragmentRegistrationBinding? = null
-    private val binding get() = _binding!!
+class RegistrationFragment : BaseFragment<FragmentRegistrationBinding>(FragmentRegistrationBinding::inflate) {
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstaceState: Bundle?
+    ): View? {
         binding.buttonToMain.setOnClickListener {
             findNavController().navigate(R.id.action_registrationFragment_to_mainFragment)
         }
-        return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        return super.onCreateView(inflater, container, savedInstaceState)
     }
 }
+
+//class RegistrationFragment : Fragment(R.layout.fragment_registration) {
+//    private var _binding: FragmentRegistrationBinding? = null
+//    private val binding get() = _binding!!
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View {
+//        _binding = FragmentRegistrationBinding.inflate(inflater, container, false)
+//        binding.buttonToMain.setOnClickListener {
+//            findNavController().navigate(R.id.action_registrationFragment_to_mainFragment)
+//        }
+//        return binding.root
+//    }
+//
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        _binding = null
+//    }
+//}

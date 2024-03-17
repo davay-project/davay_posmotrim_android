@@ -7,28 +7,45 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.davayposmotrim.android.R
+import com.davayposmotrim.android.base.BaseFragment
 import com.davayposmotrim.android.databinding.FragmentInvitingUsersBinding
 import com.davayposmotrim.android.screens.alertDialogs.AlertDialogCancelSessionFragment
 
-class InvitingUsersFragment : Fragment(R.layout.fragment_inviting_users) {
-    private var _binding: FragmentInvitingUsersBinding? = null
-    private val binding get() = _binding!!
+class InvitingUsersFragment : BaseFragment<FragmentInvitingUsersBinding>(FragmentInvitingUsersBinding::inflate) {
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        _binding = FragmentInvitingUsersBinding.inflate(inflater, container, false)
-        binding.buttonCancelSession.setOnClickListener {
-            findNavController().navigate(R.id.action_invitingUsersFragment_to_alertDialogCancelSessionFragment)
-        }
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstaceState: Bundle?
+    ): View? {
         binding.buttonStart.setOnClickListener {
             findNavController().navigate(R.id.action_invitingUsersFragment_to_movieSelectionFragment)
         }
-        return binding.root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        binding.buttonCancelSession.setOnClickListener {
+            findNavController().navigate(R.id.action_invitingUsersFragment_to_alertDialogCancelSessionFragment)
+        }
+        return super.onCreateView(inflater, container, savedInstaceState)
     }
 }
+
+//class InvitingUsersFragment : Fragment(R.layout.fragment_inviting_users) {
+//    private var _binding: FragmentInvitingUsersBinding? = null
+//    private val binding get() = _binding!!
+//    override fun onCreateView(
+//        inflater: LayoutInflater, container: ViewGroup?,
+//        savedInstanceState: Bundle?
+//    ): View {
+//        _binding = FragmentInvitingUsersBinding.inflate(inflater, container, false)
+//        binding.buttonCancelSession.setOnClickListener {
+//            findNavController().navigate(R.id.action_invitingUsersFragment_to_alertDialogCancelSessionFragment)
+//        }
+//        binding.buttonStart.setOnClickListener {
+//            findNavController().navigate(R.id.action_invitingUsersFragment_to_movieSelectionFragment)
+//        }
+//        return binding.root
+//    }
+//
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        _binding = null
+//    }
+//}

@@ -1,7 +1,6 @@
 package com.davayposmotrim.android.screens
 
-import androidx.fragment.app.Fragment
-import com.davayposmotrim.android.R
+import com.davayposmotrim.android.base.BaseFragment
+import com.davayposmotrim.android.databinding.FragmentMovieBinding
 
-class MovieFragment : Fragment(R.layout.fragment_movie) {
-}
+class MovieFragment : BaseFragment<FragmentMovieBinding>(FragmentMovieBinding::inflate)
