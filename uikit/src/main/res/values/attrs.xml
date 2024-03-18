@@ -6,5 +6,10 @@
         <attr name="titleEvaluation" format="string" />
         <attr name="subtitleEvaluation" format="string" />
     </declare-styleable>
-
+    <declare-styleable name="SessionCustomView">
+        <attr name="titleSession" format="string" />
+        <attr name="subtitleSession" format="string" />
+        <attr name="matchesCount" format="integer" />
+        <attr name="imageUrl" format="integer" />
+    </declare-styleable>
 </resources>
