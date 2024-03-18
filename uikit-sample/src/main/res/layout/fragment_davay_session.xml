@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.fragments.DavaySessionFragment">
 
-    <TextView
+    <com.davayposmoritm.uikit.views.SessionCustomView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Davay session view"
-        android:textSize="32sp"
-        android:gravity="center"/>
-
+        android:layout_height="wrap_content"
+        app:imageUrl="https://kartinki.pics/pics/uploads/posts/2022-08/thumbs/1659637411_3-kartinkin-net-p-zastavka-filma-krasivo-3.jpg"
+        app:matchesCount="10"
+        app:subtitleSession="@string/subtitleSession"
+        app:titleSession="@string/titleSession" />
 </FrameLayout>
