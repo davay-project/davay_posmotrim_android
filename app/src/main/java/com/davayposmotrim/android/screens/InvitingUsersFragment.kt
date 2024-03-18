@@ -12,19 +12,17 @@ import com.davayposmotrim.android.databinding.FragmentInvitingUsersBinding
 import com.davayposmotrim.android.screens.alertDialogs.AlertDialogCancelSessionFragment
 
 class InvitingUsersFragment : BaseFragment<FragmentInvitingUsersBinding>(FragmentInvitingUsersBinding::inflate) {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstaceState: Bundle?
-    ): View? {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.buttonStart.setOnClickListener {
             findNavController().navigate(R.id.action_invitingUsersFragment_to_movieSelectionFragment)
         }
         binding.buttonCancelSession.setOnClickListener {
             findNavController().navigate(R.id.action_invitingUsersFragment_to_alertDialogCancelSessionFragment)
         }
-        return super.onCreateView(inflater, container, savedInstaceState)
+        super.onViewCreated(view, savedInstanceState)
     }
+
 }
 
 //class InvitingUsersFragment : Fragment(R.layout.fragment_inviting_users) {

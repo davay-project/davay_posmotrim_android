@@ -11,15 +11,12 @@ import com.davayposmotrim.android.databinding.FragmentCoincidencesBinding
 
 class CoincidencesFragment :
     BaseFragment<FragmentCoincidencesBinding>(FragmentCoincidencesBinding::inflate) {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstaceState: Bundle?
-    ): View? {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.buttonToMovie.setOnClickListener {
             findNavController().navigate(R.id.action_coincidencesFragment_to_movieFragment)
         }
-        return super.onCreateView(inflater, container, savedInstaceState)
+        super.onViewCreated(view, savedInstanceState)
     }
 }
 

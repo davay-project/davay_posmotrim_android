@@ -16,10 +16,15 @@ class RegistrationFragment : BaseFragment<FragmentRegistrationBinding>(FragmentR
         container: ViewGroup?,
         savedInstaceState: Bundle?
     ): View? {
+
+        return super.onCreateView(inflater, container, savedInstaceState)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.buttonToMain.setOnClickListener {
             findNavController().navigate(R.id.action_registrationFragment_to_mainFragment)
         }
-        return super.onCreateView(inflater, container, savedInstaceState)
+        super.onViewCreated(view, savedInstanceState)
     }
 }
 

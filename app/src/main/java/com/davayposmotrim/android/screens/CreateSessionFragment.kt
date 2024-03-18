@@ -14,15 +14,12 @@ import com.davayposmotrim.android.databinding.FragmentCreateSessionBinding
 import com.davayposmotrim.android.databinding.FragmentRegistrationBinding
 
 class CreateSessionFragment : BaseFragment<FragmentCreateSessionBinding>(FragmentCreateSessionBinding::inflate) {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstaceState: Bundle?
-    ): View? {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.buttonToInvitingUsers.setOnClickListener {
             findNavController().navigate(R.id.action_createSessionFragment_to_invitingUsersFragment)
         }
-        return super.onCreateView(inflater, container, savedInstaceState)
+        super.onViewCreated(view, savedInstanceState)
     }
 }
 

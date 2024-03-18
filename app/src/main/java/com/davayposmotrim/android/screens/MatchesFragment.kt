@@ -11,15 +11,12 @@ import com.davayposmotrim.android.base.BaseFragment
 import com.davayposmotrim.android.databinding.FragmentMatchesBinding
 
 class MatchesFragment : BaseFragment<FragmentMatchesBinding>(FragmentMatchesBinding::inflate) {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstaceState: Bundle?
-    ): View? {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.buttonContinueSession.setOnClickListener {
             findNavController().popBackStack(R.id.movieSelectionFragment, false)
         }
-        return super.onCreateView(inflater, container, savedInstaceState)
+        super.onViewCreated(view, savedInstanceState)
     }
 }
 

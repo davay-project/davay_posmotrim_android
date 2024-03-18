@@ -13,11 +13,8 @@ import com.davayposmotrim.android.databinding.FragmentInvitingUsersBinding
 import com.davayposmotrim.android.databinding.FragmentMovieSelectionBinding
 
 class MovieSelectionFragment : BaseFragment<FragmentMovieSelectionBinding>(FragmentMovieSelectionBinding::inflate) {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstaceState: Bundle?
-    ): View? {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.buttonMatch.setOnClickListener {
             findNavController().navigate(R.id.action_movieSelectionFragment_to_matchesFragment)
         }
@@ -27,7 +24,7 @@ class MovieSelectionFragment : BaseFragment<FragmentMovieSelectionBinding>(Fragm
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             findNavController().navigate(R.id.action_movieSelectionFragment_to_alertDialogLeaveSession)
         }
-        return super.onCreateView(inflater, container, savedInstaceState)
+        super.onViewCreated(view, savedInstanceState)
     }
 }
 

@@ -12,15 +12,11 @@ import com.davayposmotrim.android.databinding.FragmentCreateSessionBinding
 import com.davayposmotrim.android.databinding.FragmentSessionsBinding
 
 class SessionsFragment : BaseFragment<FragmentSessionsBinding>(FragmentSessionsBinding::inflate) {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstaceState: Bundle?
-    ): View? {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.buttonToMovieFromSessions.setOnClickListener {
             findNavController().navigate(R.id.action_sessionsFragment_to_movieFragment)
         }
-        return super.onCreateView(inflater, container, savedInstaceState)
+        super.onViewCreated(view, savedInstanceState)
     }
 }
 

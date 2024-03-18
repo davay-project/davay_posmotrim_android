@@ -12,16 +12,14 @@ import com.davayposmotrim.android.databinding.FragmentFavoriteMoviesBinding
 import com.davayposmotrim.android.databinding.FragmentMovieBinding
 
 class FavoriteMoviesFragment : BaseFragment<FragmentFavoriteMoviesBinding>(FragmentFavoriteMoviesBinding::inflate) {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstaceState: Bundle?
-    ): View? {
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.buttonToSessions.setOnClickListener {
             findNavController().navigate(R.id.action_favoriteMoviesFragment_to_sessionsFragment)
         }
-        return super.onCreateView(inflater, container, savedInstaceState)
+        super.onViewCreated(view, savedInstanceState)
     }
+
 }
 
 
