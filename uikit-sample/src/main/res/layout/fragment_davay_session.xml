@@ -3,14 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.fragments.DavaySessionFragment">
 
-    <com.davayposmoritm.uikit.views.SessionCustomView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:imageUrl="https://kartinki.pics/pics/uploads/posts/2022-08/thumbs/1659637411_3-kartinkin-net-p-zastavka-filma-krasivo-3.jpg"
-        app:matchesCount="10"
-        app:subtitleSession="@string/subtitleSession"
-        app:titleSession="@string/titleSession" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.davayposmoritm.uikit.views.SessionCustomView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:imageUrl="https://kartinki.pics/pics/uploads/posts/2022-08/thumbs/1659637411_3-kartinkin-net-p-zastavka-filma-krasivo-3.jpg"
+                app:matchesCount="10"
+                app:subtitleSession="@string/subtitleSession"
+                app:titleSession="@string/titleSession" />
+
+            <com.davayposmoritm.uikit.views.SessionCustomView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:imageUrl="https://kartinki.pics/pics/uploads/posts/2022-08/thumbs/1659637411_3-kartinkin-net-p-zastavka-filma-krasivo-3.jpg"
+                app:matchesCount="10"
+                app:subtitleSession="@string/subtitleSession"
+                app:titleSession="@string/titleSession" />
+
+            <com.davayposmoritm.uikit.views.SessionCustomView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:imageUrl="https://kartinki.pics/pics/uploads/posts/2022-08/thumbs/1659637411_3-kartinkin-net-p-zastavka-filma-krasivo-3.jpg"
+                app:matchesCount="10"
+                app:subtitleSession="@string/subtitleSession"
+                app:titleSession="@string/titleSession" />
+
+            <com.davayposmoritm.uikit.views.SessionCustomView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:imageUrl="https://kartinki.pics/pics/uploads/posts/2022-08/thumbs/1659637411_3-kartinkin-net-p-zastavka-filma-krasivo-3.jpg"
+                app:matchesCount="10"
+                app:subtitleSession="@string/subtitleSession"
+                app:titleSession="@string/titleSession" />
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

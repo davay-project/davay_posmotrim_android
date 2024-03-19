@@ -28,14 +28,14 @@ class SessionCustomView @JvmOverloads constructor(
             findViewById<TextView>(R.id.countMatchesSessionTextView).text =
                 getString(R.styleable.SessionCustomView_matchesCount)
 
-            val imageUrl = attrs?.getAttributeValue("http://schemas.android.com/apk/res-auto", "imageUrl")
+            findViewById<TextView>(R.id.countStringMatchesSessionTextView).text ="matches" /////
 
-            // Проверяем, что imageUrl не равен null и загружаем изображение с помощью Glide
-            imageUrl?.let {
-                Glide.with(context)
-                    .load(imageUrl)
-                    .into(findViewById(R.id.imageSession))
-            }
+            val imageUrl = getString(R.styleable.SessionCustomView_imageUrl)
+            Glide.with(context)
+                .load(imageUrl)
+                .into(findViewById(R.id.imageSession))
+
+
         }
     }
 }
