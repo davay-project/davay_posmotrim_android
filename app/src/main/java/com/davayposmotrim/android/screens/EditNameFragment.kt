@@ -1,5 +1,6 @@
 package com.davayposmotrim.android.screens
 
-import androidx.fragment.app.Fragment
-import com.davayposmotrim.android.R
-class EditNameFragment : Fragment(R.layout.fragment_edit_name)
+import com.davayposmotrim.android.base.BaseFragment
+import com.davayposmotrim.android.databinding.FragmentEditNameBinding
+
+class EditNameFragment : BaseFragment<FragmentEditNameBinding>(FragmentEditNameBinding::inflate)

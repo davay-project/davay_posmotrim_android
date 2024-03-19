@@ -1,6 +1,7 @@
 package com.davayposmotrim.android.screens
 
-import androidx.fragment.app.Fragment
-import com.davayposmotrim.android.R
+import com.davayposmotrim.android.base.BaseFragment
+import com.davayposmotrim.android.databinding.FragmentConnectingSessionBinding
 
-class ConnectingSessionFragment : Fragment(R.layout.fragment_connecting_session)
+class ConnectingSessionFragment :
+    BaseFragment<FragmentConnectingSessionBinding>(FragmentConnectingSessionBinding::inflate)
