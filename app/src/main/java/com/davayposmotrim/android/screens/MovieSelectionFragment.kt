@@ -12,6 +12,7 @@ class MovieSelectionFragment :
     BaseFragment<FragmentMovieSelectionBinding>(FragmentMovieSelectionBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.buttonMatch.setOnClickListener {
             findNavController().navigate(R.id.action_movieSelectionFragment_to_matchesFragment)
         }
@@ -21,6 +22,5 @@ class MovieSelectionFragment :
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
             findNavController().navigate(R.id.action_movieSelectionFragment_to_alertDialogLeaveSession)
         }
-        super.onViewCreated(view, savedInstanceState)
     }
 }

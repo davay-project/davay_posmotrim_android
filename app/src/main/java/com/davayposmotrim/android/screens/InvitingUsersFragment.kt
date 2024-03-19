@@ -11,12 +11,12 @@ class InvitingUsersFragment :
     BaseFragment<FragmentInvitingUsersBinding>(FragmentInvitingUsersBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.buttonStart.setOnClickListener {
             findNavController().navigate(R.id.action_invitingUsersFragment_to_movieSelectionFragment)
         }
         binding.buttonCancelSession.setOnClickListener {
             findNavController().navigate(R.id.action_invitingUsersFragment_to_alertDialogCancelSessionFragment)
         }
-        super.onViewCreated(view, savedInstanceState)
     }
 }

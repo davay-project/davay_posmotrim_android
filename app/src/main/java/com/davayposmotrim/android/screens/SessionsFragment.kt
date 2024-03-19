@@ -9,9 +9,9 @@ import com.davayposmotrim.android.databinding.FragmentSessionsBinding
 
 class SessionsFragment : BaseFragment<FragmentSessionsBinding>(FragmentSessionsBinding::inflate) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.buttonToMovieFromSessions.setOnClickListener {
             findNavController().navigate(R.id.action_sessionsFragment_to_movieFragment)
         }
-        super.onViewCreated(view, savedInstanceState)
     }
 }

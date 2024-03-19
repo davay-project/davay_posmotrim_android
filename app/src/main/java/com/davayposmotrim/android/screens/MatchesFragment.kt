@@ -9,9 +9,9 @@ import com.davayposmotrim.android.databinding.FragmentMatchesBinding
 
 class MatchesFragment : BaseFragment<FragmentMatchesBinding>(FragmentMatchesBinding::inflate) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.buttonContinueSession.setOnClickListener {
             findNavController().popBackStack(R.id.movieSelectionFragment, false)
         }
-        super.onViewCreated(view, savedInstanceState)
     }
 }

@@ -11,9 +11,9 @@ class IntroductoryFragment :
     BaseFragment<FragmentIntroductoryBinding>(FragmentIntroductoryBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.buttonToRegistration.setOnClickListener {
             findNavController().navigate(R.id.action_introductoryFragment_to_registrationFragment)
         }
-        super.onViewCreated(view, savedInstanceState)
     }
 }

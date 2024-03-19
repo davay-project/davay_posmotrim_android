@@ -11,9 +11,9 @@ class RegistrationFragment :
     BaseFragment<FragmentRegistrationBinding>(FragmentRegistrationBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.buttonToMain.setOnClickListener {
             findNavController().navigate(R.id.action_registrationFragment_to_mainFragment)
         }
-        super.onViewCreated(view, savedInstanceState)
     }
 }

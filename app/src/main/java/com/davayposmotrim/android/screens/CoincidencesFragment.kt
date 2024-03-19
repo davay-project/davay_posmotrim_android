@@ -11,9 +11,9 @@ class CoincidencesFragment :
     BaseFragment<FragmentCoincidencesBinding>(FragmentCoincidencesBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.buttonToMovie.setOnClickListener {
             findNavController().navigate(R.id.action_coincidencesFragment_to_movieFragment)
         }
-        super.onViewCreated(view, savedInstanceState)
     }
 }

@@ -11,9 +11,9 @@ class CreateSessionFragment :
     BaseFragment<FragmentCreateSessionBinding>(FragmentCreateSessionBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.buttonToInvitingUsers.setOnClickListener {
             findNavController().navigate(R.id.action_createSessionFragment_to_invitingUsersFragment)
         }
-        super.onViewCreated(view, savedInstanceState)
     }
 }

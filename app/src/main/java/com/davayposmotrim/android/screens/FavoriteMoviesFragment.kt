@@ -11,9 +11,9 @@ class FavoriteMoviesFragment :
     BaseFragment<FragmentFavoriteMoviesBinding>(FragmentFavoriteMoviesBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.buttonToSessions.setOnClickListener {
             findNavController().navigate(R.id.action_favoriteMoviesFragment_to_sessionsFragment)
         }
-        super.onViewCreated(view, savedInstanceState)
     }
 }
