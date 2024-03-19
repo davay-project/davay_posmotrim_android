@@ -28,7 +28,7 @@ class SessionCustomView @JvmOverloads constructor(
             findViewById<TextView>(R.id.countMatchesSessionTextView).text =
                 getString(R.styleable.SessionCustomView_matchesCount)
 
-            findViewById<TextView>(R.id.countStringMatchesSessionTextView).text ="matches" /////
+            findViewById<TextView>(R.id.countStringMatchesSessionTextView).text ="matches: " /////
 
             val imageUrl = getString(R.styleable.SessionCustomView_imageUrl)
             Glide.with(context)
