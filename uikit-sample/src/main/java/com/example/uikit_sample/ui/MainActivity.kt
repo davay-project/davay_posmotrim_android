@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), ClickEventHandler {
     }
 
     override fun navigateToFragment(holder: CustomElementListAdapter.CustomElementViewHolder) {
-        when(holder.binding.customElementType.id) {
+        when (holder.binding.customElementType.id) {
             Elements.DavayBannerView.ordinal -> launchFragment(DavayBannerFragment())
             Elements.DavayButtonView.ordinal -> launchFragment(DavayButtonFragment())
             Elements.DavayFilmView.ordinal -> launchFragment(DavayFilmFragment())
