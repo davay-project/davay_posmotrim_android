@@ -16,14 +16,14 @@ class SessionCustomView @JvmOverloads constructor(
     init {
         inflate(context, R.layout.session_custom_view, this)
         attrs?.applyStyleable(context, R.styleable.SessionCustomView) {
-            findViewById<TextView>(R.id.titleSessionTextView).text=
+            findViewById<TextView>(R.id.titleSessionTextView).text =
                 getString(R.styleable.SessionCustomView_titleSession)
-            findViewById<TextView>(R.id.subtitleSessionTextView).text=
+            findViewById<TextView>(R.id.subtitleSessionTextView).text =
                 getString(R.styleable.SessionCustomView_subtitleSession)
-            findViewById<TextView>(R.id.countMatchesSessionTextView).text=
+            findViewById<TextView>(R.id.countMatchesSessionTextView).text =
                 getString(R.styleable.SessionCustomView_matchesCount)
-            findViewById<TextView>(R.id.countStringMatchesSessionTextView).text="matches: "
-            val imageUrl=getString(R.styleable.SessionCustomView_imageUrl)
+            findViewById<TextView>(R.id.countStringMatchesSessionTextView).text ="matches: "
+            val imageUrl =getString(R.styleable.SessionCustomView_imageUrl)
             Glide.with(context)
                 .load(imageUrl)
                 .into(findViewById(R.id.imageSession))
