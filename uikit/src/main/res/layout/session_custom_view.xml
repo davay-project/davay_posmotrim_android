@@ -52,14 +52,12 @@
                             android:id="@+id/countStringMatchesSessionTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/inter_light"
                             android:textColor="@color/text_light" />
 
                         <TextView
                             android:id="@+id/countMatchesSessionTextView"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/inter_light"
                             android:textColor="@color/text_light" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -70,7 +68,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="@font/inter_light"
                 android:paddingBottom="10dp" />
 
             <ImageView
