@@ -6,5 +6,9 @@
         <attr name="titleEvaluation" format="string" />
         <attr name="subtitleEvaluation" format="string" />
     </declare-styleable>
+    <declare-styleable name="DavayBannerView">
+        <attr name="option" format="integer" />
+
+    </declare-styleable>
 
 </resources>
