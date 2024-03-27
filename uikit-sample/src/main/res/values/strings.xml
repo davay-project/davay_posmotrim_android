@@ -2,4 +2,6 @@
     <string name="app_name">uikit-sample</string>
     <string name="titleRating">Title</string>
     <string name="subtitleRating">Subtitle</string>
+    <string name="titleSession">Title</string>
+    <string name="subtitleSession">Subtitle</string>
 </resources>
